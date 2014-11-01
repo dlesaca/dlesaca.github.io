@@ -1,0 +1,166 @@
+@media (min-width: 5em) {
+  .navigation {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #313131;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .navigation li {
+    padding: 10px;
+    border-bottom: 1px solid #C5B357;
+  }
+
+  .navigation li a {
+  }
+
+  .site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  label[for="nav-trigger"] {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 2;
+  }
+
+  label[for="nav-trigger"] {
+    /* ... previous styles here... */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6' fill='white'/><rect y='24' width='30' height='6' fill='white'/><rect y='12' width='30' height='6' fill='white'/></svg>");
+    background-size: contain;
+  }
+
+  .nav-trigger:checked + label {
+    left: 215px;
+  }
+
+  .nav-trigger:checked ~ .site-wrap {
+    left: 200px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+  }
+
+  .nav-trigger + label, .site-wrap {
+    transition: left 0.2s;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  ul[class=navigation-full] {
+    display: none;
+  }
+
+  .main-logo {
+    margin-left: 65px; /*65px*/
+  }
+
+  menu {
+    margin-top: 23px;
+  }
+
+  menu.media a {
+    font-size: 20px;
+    padding: 10px;
+    transition: color 0.4s ease;
+  }
+
+  menu.media a:hover,
+  menu.media a:focus {
+    color: #C5B357;
+  }
+
+  .hero-img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 40em) {
+  .main-logo {
+    margin: 0;
+  }
+
+  label[for="nav-trigger"] {
+    display: none;
+  }
+
+  ul[class=navigation-full] {
+    display: block;
+    float: left;
+    padding: 0;
+    margin-top: 28px;
+  }
+
+  ul[class=navigation-full] li {
+    display: inline;
+  }
+
+  ul[class=navigation-full] a {
+    padding: 28px;
+    transition: background-color 0.4s ease;
+  }
+
+  ul[class=navigation-full] a:hover,
+  ul[class=navigation-full] a:focus {
+    padding: 28px;
+    background-color: #C5B357;
+  }
+
+  menu {
+    margin-top: 30px;
+    float: right;
+  }
+
+  menu.media a {
+    font-size: 18px;
+    padding: 20px;
+    transition: color 0.4s ease;
+  }
+
+  menu.media a:hover,
+  menu.media a:focus {
+    color: #C5B357;
+  }
+
+  .hero-img {
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    color: #fff;
+  }
+
+  .about {
+    padding: 10px;
+  }
+
+
+
+}
